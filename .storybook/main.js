@@ -5,6 +5,7 @@ module.exports = {
     '@storybook/addon-essentials',
     '@storybook/addon-a11y',
     'storybook-css-modules-preset',
+    'storybook-addon-next-router',
   ],
   framework: '@storybook/react',
 };
