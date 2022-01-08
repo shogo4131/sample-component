@@ -1,7 +1,8 @@
 import type { VFC, ReactNode } from 'react';
 import { useState, useCallback } from 'react';
+import Image from 'next/image';
 import clsx from 'clsx';
-import ArrowDownIcon from '../../../public/arrow-down-gray-390.svg';
+import ArrowDownIcon from '../../../public/arrow-down-gray.svg';
 import styles from './index.module.css';
 
 export type Props = {
@@ -27,8 +28,7 @@ export const Accordion: VFC<Props> = ({
     <div className={clsx(styles.root, className)}>
       <div className={clsx(styles.header, headerClassName)}>
         {header}
-        {/*TODO: Imageタグを使用できるようにする */}
-        <img
+        <Image
           alt="arrow-down"
           src={ArrowDownIcon}
           className={clsx(styles.icon, { [styles.activeIcon]: open })}
