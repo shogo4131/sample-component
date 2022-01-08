@@ -8,7 +8,7 @@
     "lint": "next lint",
     "lint:css": "stylelint 'src/**/*.css'",
     "lint:css:fix": "stylelint --fix src/**/*.css",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -s ./public -p 6006",
     "build-storybook": "build-storybook",
     "prepare": "husky install",
     "chromatic": "npx chromatic --project-token=a3a998a75785"
