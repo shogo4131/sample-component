@@ -1,0 +1,37 @@
+/* Accordion Style */
+
+.root {
+  display: inline-block;
+  background-color: #dfdede;
+  width: 300px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.content {
+  display: none;
+  max-height: 0;
+  padding: 0 15px;
+  overflow-y: scroll;
+}
+
+.icon {
+  transform: rotate(0deg);
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+
+.active {
+  display: block;
+  max-height: 100%;
+  opacity: 1;
+}
+
+.activeIcon {
+  transform: rotate(180deg);
+}
