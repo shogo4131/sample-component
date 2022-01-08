@@ -2,8 +2,8 @@
 
 .root {
   display: inline-block;
-  background-color: #dfdede;
   width: 300px;
+  background-color: #dfdede;
 }
 
 .header {
@@ -21,9 +21,9 @@
 }
 
 .icon {
+  cursor: pointer;
   transform: rotate(0deg);
   transition: opacity 0.2s;
-  cursor: pointer;
 }
 
 .active {
