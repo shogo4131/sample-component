@@ -1,4 +1,5 @@
 import type { VFC } from 'react';
+import { Fragment } from 'react';
 import { useCallback } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
@@ -27,9 +28,8 @@ export const BreadCrumb: VFC<Props> = ({ className, items }) => {
   return (
     <div className={clsx(styles.root, className)}>
       {items.map(({ id, href, label }) => (
-        <>
+        <Fragment key={id}>
           <div
-            key={id}
             className={clsx({ [styles.label]: href })}
             onClick={() => onClickLinkHandler(href)}
           >
@@ -42,7 +42,7 @@ export const BreadCrumb: VFC<Props> = ({ className, items }) => {
               className={styles.icon}
             />
           )}
-        </>
+        </Fragment>
       ))}
     </div>
   );
