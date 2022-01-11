@@ -1,0 +1,41 @@
+/* Switch Style */
+
+.root {
+  display: inline-flex;
+  align-items: center;
+}
+
+.input {
+  display: none;
+}
+
+.content {
+  position: relative;
+  width: 42px;
+  height: 20px;
+  background-color: #383838;
+  border-radius: 42px;
+  cursor: pointer;
+}
+
+.content::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 22px;
+  height: 22px;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 50%;
+  content: '';
+  transform: translateX(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.input[type='checkbox']:checked ~ .content {
+  background-color: #007ed6;
+}
+
+.input[type='checkbox']:checked ~ .content::before {
+  transform: translateX(20px);
+}
