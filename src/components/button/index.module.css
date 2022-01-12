@@ -1,0 +1,23 @@
+/* Button Style */
+
+.root {
+  width: 80px;
+  height: 32px;
+  padding: 0 16px;
+  border: none;
+  background-color: #007ed6;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+}
+
+.root:hover {
+  background-color: #0285f3;
+}
+
+.root:disabled {
+  background-color: #007ed6;
+  color: #bcbcbc;
+  cursor: auto;
+}
