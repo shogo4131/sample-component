@@ -1,0 +1,34 @@
+/* Textarea Style */
+
+.root {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.vertical {
+  display: flex;
+}
+
+.horizontal {
+  display: block;
+}
+
+.label {
+  margin-right: 10px;
+  white-space: nowrap;
+}
+
+.textarea {
+  width: 100%;
+}
+
+.length {
+  display: flex;
+  justify-content: end;
+}
+
+.error {
+  margin: 0;
+  color: red;
+}
