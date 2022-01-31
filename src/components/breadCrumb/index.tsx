@@ -29,19 +29,10 @@ export const BreadCrumb: VFC<Props> = ({ className, items }) => {
     <div className={clsx(styles.root, className)}>
       {items.map(({ id, href, label }) => (
         <Fragment key={id}>
-          <div
-            className={clsx({ [styles.label]: href })}
-            onClick={() => onClickLinkHandler(href)}
-          >
+          <div className={clsx({ [styles.label]: href })} onClick={() => onClickLinkHandler(href)}>
             {label}
           </div>
-          {href && (
-            <Image
-              alt="arrow-right"
-              src={ArrowRightIcon}
-              className={styles.icon}
-            />
-          )}
+          {href && <Image alt="arrow-right" src={ArrowRightIcon} className={styles.icon} />}
         </Fragment>
       ))}
     </div>
