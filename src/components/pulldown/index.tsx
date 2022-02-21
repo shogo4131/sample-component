@@ -1,4 +1,5 @@
 import type { VFC } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
 import clsx from 'clsx';
 import ArrowIcon from '../../../public/arrow-down-gray.svg';
@@ -16,12 +17,13 @@ export type Props = {
   optionsClassName?: string;
   optionClassName?: string;
   title?: string;
+  direction?: 'up' | 'down';
+  gap?: string;
   options: Option[];
   selectedOptions?: Option;
   onSelect: (option: Option) => void;
 };
 
-// TODO: 上に表示されるバージョンを追加
 export const Pulldown: VFC<Props> = ({
   className,
   titleClassName,
@@ -29,14 +31,22 @@ export const Pulldown: VFC<Props> = ({
   optionsClassName,
   optionClassName,
   title,
+  direction = 'down',
+  gap = '5px',
   options,
   selectedOptions,
   onSelect,
 }) => {
+  const [height, setHeight] = useState<number>(0);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => setHeight(inputRef.current?.clientHeight ?? 0), []);
+
   return (
     <div className={clsx(styles.root, className)}>
       {title && <span className={clsx(titleClassName)}>{title}</span>}
       <input
+        ref={inputRef}
         type="text"
         value={selectedOptions?.label ?? ''}
         className={clsx(styles.input, inputClassName)}
@@ -45,7 +55,14 @@ export const Pulldown: VFC<Props> = ({
       <div className={styles.arrowIcon}>
         <Image alt="arrow" src={ArrowIcon} layout="fill" className={styles.icon} />
       </div>
-      <div className={styles.selectWrapper}>
+      <div
+        className={styles.selectWrapper}
+        style={
+          direction === 'up'
+            ? { paddingBottom: gap, bottom: `${height ?? 0}px` }
+            : { paddingTop: gap }
+        }
+      >
         <ul className={clsx(styles.list, optionsClassName)}>
           {options.map(({ label, value }) => (
             <li

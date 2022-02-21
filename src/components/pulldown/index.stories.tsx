@@ -12,7 +12,11 @@ const Template: Story<Props> = (args) => {
 
   const onChangeHandler = useCallback((option: Option) => setSelectedOption(option), []);
 
-  return <Pulldown {...args} selectedOptions={selectedOption} onSelect={onChangeHandler} />;
+  return (
+    <div style={{ marginTop: 100 }}>
+      <Pulldown {...args} selectedOptions={selectedOption} onSelect={onChangeHandler} />
+    </div>
+  );
 };
 
 export const Default = Template.bind({});
@@ -23,4 +27,15 @@ Default.args = {
     { label: 'Jon', value: 'jon' },
     { label: 'Jack', value: 'jack' },
   ],
+};
+
+export const Up = Template.bind({});
+
+Up.args = {
+  options: [
+    { label: 'Taro', value: 'taro' },
+    { label: 'Jon', value: 'jon' },
+    { label: 'Jack', value: 'jack' },
+  ],
+  direction: 'up',
 };
