@@ -10,11 +10,10 @@
     "lint:css:fix": "stylelint --fix src/**/*.css",
     "storybook": "start-storybook -s ./public -p 6006",
     "build-storybook": "build-storybook",
-    "prepare": "husky install",
-    "chromatic": "npx chromatic --project-token=a3a998a75785"
+    "prepare": "husky install"
   },
   "engines": {
-    "npm": "npmではなくyarnを使ってください"
+    "npm": "Use yarn instead of npm"
   },
   "dependencies": {
     "clsx": "^1.1.1",
