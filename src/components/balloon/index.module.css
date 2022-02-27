@@ -1,0 +1,37 @@
+/* Balloon Style */
+
+.root {
+  position: relative;
+  padding: 16px;
+  background-color: #808080;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.root::before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-top: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #808080;
+  border-left: 5px solid transparent;
+  content: '';
+  transform: translate(-50%, -100%);
+}
+
+.item {
+  white-space: nowrap;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.button {
+  width: 100%;
+  border: unset;
+  background-color: #808080;
+  color: white;
+  cursor: pointer;
+}
