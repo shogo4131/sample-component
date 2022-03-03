@@ -4,4 +4,7 @@ module.exports = {
   dev: {
     baseUrl: 'http://localhost:3000',
   },
+  compiler: {
+    removeConsole: true,
+  },
 };
