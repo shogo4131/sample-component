@@ -2,7 +2,7 @@ import type { VFC, ReactNode } from 'react';
 import { useState, useCallback } from 'react';
 import Image from 'next/image';
 import clsx from 'clsx';
-import ArrowDownIcon from '../../../public/arrow-down-gray.svg';
+import ArrowDownIcon from '@/public/arrow-down-gray.svg';
 import styles from './index.module.css';
 
 export type Props = {

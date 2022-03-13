@@ -4,7 +4,7 @@ import { useCallback } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import clsx from 'clsx';
-import ArrowRightIcon from '../../../public/arrow-right.svg';
+import ArrowRightIcon from '@/public/arrow-right.svg';
 import styles from './index.module.css';
 
 export type Props = {
