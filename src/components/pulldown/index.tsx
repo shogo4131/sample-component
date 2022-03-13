@@ -2,7 +2,7 @@ import type { VFC } from 'react';
 import { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
 import clsx from 'clsx';
-import ArrowIcon from '../../../public/arrow-down-gray.svg';
+import ArrowIcon from '@/public/arrow-down-gray.svg';
 import styles from './index.module.css';
 
 export type Option = {
