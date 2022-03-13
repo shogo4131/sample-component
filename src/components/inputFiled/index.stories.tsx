@@ -23,7 +23,7 @@ WidthPlaceholder.args = {
 export const Error = Template.bind({});
 
 Error.args = {
-  label: 'label',
+  ...WidthPlaceholder.args,
   horizontal: true,
   error: 'error message',
 };

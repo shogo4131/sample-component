@@ -21,6 +21,6 @@ Default.args = {
 export const Disabled = Template.bind({});
 
 Disabled.args = {
-  children: '保存',
+  ...Default.args,
   disabled: true,
 };

@@ -24,32 +24,20 @@ Default.args = {
 export const Left = Template.bind({});
 
 Left.args = {
+  ...Default.args,
   positions: 'left',
-  items: [
-    { label: 'test1', onClick: action('click test1') },
-    { label: 'test2', onClick: action('click test2') },
-    { label: 'test3', onClick: action('click test3') },
-  ],
 };
 
 export const Right = Template.bind({});
 
 Right.args = {
+  ...Default.args,
   positions: 'right',
-  items: [
-    { label: 'test1', onClick: action('click test1') },
-    { label: 'test2', onClick: action('click test2') },
-    { label: 'test3', onClick: action('click test3') },
-  ],
 };
 
 export const Bottom = Template.bind({});
 
 Bottom.args = {
+  ...Default.args,
   positions: 'bottom',
-  items: [
-    { label: 'test1', onClick: action('click test1') },
-    { label: 'test2', onClick: action('click test2') },
-    { label: 'test3', onClick: action('click test3') },
-  ],
 };

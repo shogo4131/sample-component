@@ -32,10 +32,6 @@ Default.args = {
 export const Up = Template.bind({});
 
 Up.args = {
-  options: [
-    { label: 'Taro', value: 'taro' },
-    { label: 'Jon', value: 'jon' },
-    { label: 'Jack', value: 'jack' },
-  ],
+  ...Default.args,
   direction: 'up',
 };
