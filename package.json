@@ -11,7 +11,7 @@
     "lint:css:fix": "stylelint --fix src/**/*.css",
     "test": "jest",
     "storybook": "start-storybook -s ./public -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook -o build",
     "prepare": "husky install"
   },
   "engines": {
