@@ -27,7 +27,7 @@
   "devDependencies": {
     "@babel/core": "^7.16.7",
     "@storybook/addon-a11y": "^6.4.9",
-    "@storybook/addon-actions": "^6.4.9",
+    "@storybook/addon-actions": "^6.5.9",
     "@storybook/addon-essentials": "^6.4.9",
     "@storybook/addon-links": "^6.4.9",
     "@storybook/react": "^6.4.9",
@@ -47,7 +47,7 @@
     "eslint-plugin-storybook": "^0.5.5",
     "husky": "^7.0.0",
     "jest": "^27.5.1",
-    "prettier": "^2.5.1",
+    "prettier": "^2.7.1",
     "storybook-addon-next-router": "^3.1.1",
     "storybook-css-modules-preset": "^1.1.1",
     "stylelint": "^14.2.0",
