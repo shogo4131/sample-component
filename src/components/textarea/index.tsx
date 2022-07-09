@@ -1,6 +1,8 @@
 import type { VFC, ComponentProps, ChangeEventHandler } from 'react';
 import { useState, useCallback, useEffect, useRef } from 'react';
+
 import clsx from 'clsx';
+
 import styles from './index.module.css';
 
 export type Props = {
@@ -60,7 +62,7 @@ export const Textarea: VFC<Props> = ({
             value={value}
             maxLength={maxLength}
             onChange={onChangeHandler}
-          ></textarea>
+           />
           {maxLength && <span className={styles.length}>{`${value.length}/${maxLength}`}</span>}
         </div>
       </div>

@@ -1,5 +1,7 @@
 import type { ReactNode, VFC } from 'react';
+
 import clsx from 'clsx';
+
 import styles from './index.module.css';
 
 export type Tab = {

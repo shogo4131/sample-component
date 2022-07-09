@@ -1,6 +1,8 @@
 import type { VFC, ComponentProps, ChangeEventHandler } from 'react';
 import { useState, useRef, useEffect } from 'react';
+
 import clsx from 'clsx';
+
 import styles from './index.module.css';
 
 // TODO: iconがあった時の処理

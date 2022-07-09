@@ -1,5 +1,7 @@
 import type { VFC, ReactNode, ComponentProps } from 'react';
+
 import clsx from 'clsx';
+
 import styles from './index.module.css';
 
 // NOTE: チームで色が決まっていれば全パターン作成して出しわけする

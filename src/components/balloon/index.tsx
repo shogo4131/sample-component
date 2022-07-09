@@ -1,5 +1,7 @@
 import type { MouseEventHandler, VFC } from 'react';
+
 import clsx from 'clsx';
+
 import styles from './index.module.css';
 
 type Position = 'top' | 'left' | 'right' | 'bottom';

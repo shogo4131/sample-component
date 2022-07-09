@@ -1,6 +1,8 @@
 import React from 'react';
-import { Story, Meta } from '@storybook/react/types-6-0';
+
 import { action } from '@storybook/addon-actions';
+import { Story, Meta } from '@storybook/react/types-6-0';
+
 import { Balloon, Props } from './index';
 
 export default {

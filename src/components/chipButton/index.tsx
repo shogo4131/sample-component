@@ -1,7 +1,12 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import type { VFC, ReactNode } from 'react';
+
 import Image from 'next/image';
+
 import clsx from 'clsx';
+
 import DeleteIcon from '@/public/delete.svg';
+
 import styles from './index.module.css';
 
 export type Props = {
