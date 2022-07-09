@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+
 import { Story, Meta } from '@storybook/react/types-6-0';
+
 import { Tab, Props } from './index';
 
 export default {
