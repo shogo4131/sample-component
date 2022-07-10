@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import type { VFC } from 'react';
+import type { FC } from 'react';
 import { Fragment, useCallback } from 'react';
 
 import Image from 'next/image';
@@ -11,7 +11,7 @@ import ArrowRightIcon from '@/public/arrow-right.svg';
 
 import styles from './index.module.css';
 
-export type Props = {
+type Props = {
   className?: string;
   items: Crumbs[];
 };
@@ -22,7 +22,7 @@ type Crumbs = {
   href?: string;
 };
 
-export const BreadCrumb: VFC<Props> = ({ className, items }) => {
+export const BreadCrumb: FC<Props> = ({ className, items }) => {
   const { push } = useRouter();
 
   const onClickLinkHandler = useCallback(

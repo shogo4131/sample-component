@@ -1,18 +1,13 @@
-import React from 'react';
+import { ComponentMeta, ComponentStoryObj } from '@storybook/react';
 
-import { Story, Meta } from '@storybook/react/types-6-0';
-
-import { ChipButton, Props } from './index';
+import { ChipButton } from './index';
 
 export default {
   component: ChipButton,
-  title: 'Components/ChipButton',
-} as Meta;
+} as ComponentMeta<typeof ChipButton>;
 
-const Template: Story<Props> = (args) => <ChipButton {...args} />;
-
-export const Default = Template.bind({});
-
-Default.args = {
-  children: 'chipButton',
+export const Default: ComponentStoryObj<typeof ChipButton> = {
+  args: {
+    children: 'chipButton',
+  },
 };

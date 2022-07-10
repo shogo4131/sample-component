@@ -1,4 +1,4 @@
-import type { MouseEventHandler, VFC } from 'react';
+import type { MouseEventHandler, FC } from 'react';
 
 import clsx from 'clsx';
 
@@ -6,19 +6,19 @@ import styles from './index.module.css';
 
 type Position = 'top' | 'left' | 'right' | 'bottom';
 
-export type Items = {
+type Items = {
   label: string;
   onClick: MouseEventHandler<HTMLButtonElement>;
 };
 
-export type Props = {
+type Props = {
   className?: string;
   itemClassName?: string;
   positions?: Position;
   items: Items[];
 };
 
-export const Balloon: VFC<Props> = ({ className, itemClassName, positions = 'top', items }) => {
+export const Balloon: FC<Props> = ({ className, itemClassName, positions = 'top', items }) => {
   return (
     <ul className={clsx(styles.root, styles[positions], className)}>
       {items.map(({ label, onClick }) => (

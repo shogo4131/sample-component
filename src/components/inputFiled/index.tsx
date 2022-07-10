@@ -1,4 +1,4 @@
-import type { VFC, ComponentProps, ChangeEventHandler } from 'react';
+import type { FC, ComponentProps, ChangeEventHandler } from 'react';
 import { useState, useRef, useEffect } from 'react';
 
 import clsx from 'clsx';
@@ -6,7 +6,7 @@ import clsx from 'clsx';
 import styles from './index.module.css';
 
 // TODO: iconがあった時の処理
-export type Props = {
+type Props = {
   className?: string;
   labelClassName?: string;
   wrapperClassName?: string;
@@ -19,7 +19,7 @@ export type Props = {
 
 const LABEL_MARGIN = 20;
 
-export const InputFiled: VFC<Props> = ({
+export const InputFiled: FC<Props> = ({
   className,
   labelClassName,
   wrapperClassName,
@@ -40,9 +40,7 @@ export const InputFiled: VFC<Props> = ({
 
   return (
     <label className={clsx(styles.root, className)}>
-      <div
-        className={clsx(styles.wrapper, { [styles.horizontal]: horizontal })}
-      >
+      <div className={clsx(styles.wrapper, { [styles.horizontal]: horizontal })}>
         {label && (
           <span
             ref={spanRef}
@@ -53,11 +51,7 @@ export const InputFiled: VFC<Props> = ({
           </span>
         )}
         <div className={clsx(styles.inputWrapper, wrapperClassName)}>
-          <input
-            {...rest}
-            className={clsx(styles.input, inputClassName)}
-            onChange={onChange}
-          />
+          <input {...rest} className={clsx(styles.input, inputClassName)} onChange={onChange} />
         </div>
       </div>
       {error && (

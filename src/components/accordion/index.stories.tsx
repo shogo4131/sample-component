@@ -1,25 +1,20 @@
-import React from 'react';
+import { ComponentMeta, ComponentStoryObj } from '@storybook/react';
 
-import { Story, Meta } from '@storybook/react/types-6-0';
-
-import { Accordion, Props } from './index';
+import { Accordion } from './index';
 
 export default {
   component: Accordion,
-  title: 'Components/Accordion',
-} as Meta;
+} as ComponentMeta<typeof Accordion>;
 
-const Template: Story<Props> = (args) => <Accordion {...args} />;
-
-export const Default = Template.bind({});
-
-Default.args = {
-  header: <div>title</div>,
-  children: (
-    <ul>
-      <li>テスト</li>
-      <li>テスト</li>
-      <li>テスト</li>
-    </ul>
-  ),
+export const Default: ComponentStoryObj<typeof Accordion> = {
+  args: {
+    header: 'タイトル',
+    children: (
+      <ul>
+        <li>テスト</li>
+        <li>テスト</li>
+        <li>テスト</li>
+      </ul>
+    ),
+  },
 };

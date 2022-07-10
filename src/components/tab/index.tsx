@@ -1,16 +1,16 @@
-import type { ReactNode, VFC } from 'react';
+import type { ReactNode, FC } from 'react';
 
 import clsx from 'clsx';
 
 import styles from './index.module.css';
 
-export type Tab = {
+type Tab = {
   id: string;
   label: string;
   content: ReactNode;
 };
 
-export type Props = {
+type Props = {
   className?: string;
   headerClassName?: string;
   labelClassName?: string;
@@ -19,7 +19,7 @@ export type Props = {
   onChange: (id: string) => void;
 };
 
-export const Tab: VFC<Props> = ({
+export const Tab: FC<Props> = ({
   className,
   headerClassName,
   labelClassName,

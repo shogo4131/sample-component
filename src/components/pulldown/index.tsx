@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import type { VFC } from 'react';
+import type { FC } from 'react';
 import { useRef, useState, useEffect } from 'react';
 
 import Image from 'next/image';
@@ -10,12 +10,12 @@ import ArrowIcon from '@/public/arrow-down-gray.svg';
 
 import styles from './index.module.css';
 
-export type Option = {
+type Option = {
   label: string;
   value: string | number;
 };
 
-export type Props = {
+type Props = {
   className?: string;
   titleClassName?: string;
   inputClassName?: string;
@@ -29,7 +29,7 @@ export type Props = {
   onSelect: (option: Option) => void;
 };
 
-export const Pulldown: VFC<Props> = ({
+export const Pulldown: FC<Props> = ({
   className,
   titleClassName,
   inputClassName,

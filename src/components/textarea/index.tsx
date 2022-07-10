@@ -1,11 +1,11 @@
-import type { VFC, ComponentProps, ChangeEventHandler } from 'react';
+import type { FC, ComponentProps, ChangeEventHandler } from 'react';
 import { useState, useCallback, useEffect, useRef } from 'react';
 
 import clsx from 'clsx';
 
 import styles from './index.module.css';
 
-export type Props = {
+type Props = {
   className?: string;
   textareaClassName?: string;
   labelClassName?: string;
@@ -13,11 +13,12 @@ export type Props = {
   label?: string;
   defaultValue?: string;
   error?: string;
+  onChange: ChangeEventHandler<HTMLTextAreaElement>;
 } & Omit<ComponentProps<'textarea'>, 'defaultValue'>;
 
 const LABEL_MARGIN = 20;
 
-export const Textarea: VFC<Props> = ({
+export const Textarea: FC<Props> = ({
   className,
   textareaClassName,
   labelClassName,
@@ -38,10 +39,13 @@ export const Textarea: VFC<Props> = ({
     setMarginLeft(horizontal ? spanRef.current.clientWidth + LABEL_MARGIN : 0);
   }, [horizontal, spanRef]);
 
-  const onChangeHandler: ChangeEventHandler<HTMLTextAreaElement> = useCallback((e) => {
-    setValue(e.target.value);
-    if (onChange) onChange(e);
-  }, []);
+  const onChangeHandler: ChangeEventHandler<HTMLTextAreaElement> = useCallback(
+    (e) => {
+      setValue(e.target.value);
+      if (onChange) onChange(e);
+    },
+    [onChange]
+  );
 
   return (
     <label className={clsx(styles.root, className)}>
@@ -62,7 +66,7 @@ export const Textarea: VFC<Props> = ({
             value={value}
             maxLength={maxLength}
             onChange={onChangeHandler}
-           />
+          />
           {maxLength && <span className={styles.length}>{`${value.length}/${maxLength}`}</span>}
         </div>
       </div>
